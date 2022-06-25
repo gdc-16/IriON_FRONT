@@ -1,7 +1,8 @@
 import React from 'react';
-import Header from '../../components/common/Header/Header';
+import { Advertisement } from '../../components/Main/advertisement';
+import List from '../../components/moreRecommend/List';
 import RowSlider from '../../components/recommend/rowSlider';
 
 export function Main() {
-  return <div><Header /><RowSlider /></div>
+  return <div><Advertisement /><RowSlider /><List /></div>
 }

@@ -103,6 +103,15 @@ section {
 }
 body {
     line-height: 1;
+    font-family: 'S-CoreDream-6Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff')
+        format('woff');
+    font-weight: normal;
+    font-style: normal;
+    -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+    display: none;
 }
 ol,
 ul {
@@ -145,4 +154,8 @@ button {
     padding: 0;
     font: inherit;
     cursor: pointer;
+}
+
+* {
+    font-family: 'S-CoreDream-6Bold';
 }
