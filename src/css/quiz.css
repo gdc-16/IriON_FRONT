@@ -1,9 +1,4 @@
-body {
-    background-color: #ffd8d3;
-}
-
 /* header */
-
 .header.quiz-header {
     padding: 20px 20px;
     border-bottom-right-radius: 60px;
@@ -12,30 +7,61 @@ body {
     border-bottom-right-radius: 30px;
 }
 
-.achievement .flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    margin-top: 220px;
+.header .header-nap .logo {
+    width: 40px;
+}
+.header-nap .logo img{
+    width: fit-content
 }
 
-.achievement .flex .flex-items {
+.choice {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 800px;
     text-align: center;
 }
 
-.achievement .flex .flex-items img {
-    max-width: 180px;
+.choice .title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 90px;
 }
 
-.flex-items .progress50 {
-    color: #676767;
+.choice-button {
+    display: flex;
+    justify-content: space-between;
 }
 
-.flex-items .progress10 {
-    color: #939393;
+.choice-button button {
+    width: fit-content;
+    font-size: 20px;
+    font-weight: 700;
+    transition: all .4s;
 }
 
-.flex-items .progress0 {
-    color: #fff;
+.choice-button button:hover {
+    margin-top: 20px;
+    opacity: 1;
+    transform: scale(1.2);
+    margin: 0 20px;
+}
+
+.choice-button-cover {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin-bottom: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+.choice-button-cover img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
