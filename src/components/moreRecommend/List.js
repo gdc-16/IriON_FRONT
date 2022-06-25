@@ -2,8 +2,9 @@ import React, { useRef, useEffect, useState } from 'react';
 import Grid from './grid';
 import '../../assets/css/moreRecommend.css'
 
-export default function List(){
-    const items = [{day: 6, name: '치와와', age: 3, gender:'여', carehouse: '서양보호소'}, {day: 6, name: '치와와', age: 3, gender:'여', carehouse: '서양보호소'}, {day: 6, name: '치와와', age: 3, gender:'여', carehouse: '서양보호소'}, {day: 6, name: '치와와', age: 3, gender:'여', carehouse: '서양보호소'}, {day: 6, name: '치와와', age: 3, gender:'여', carehouse: '서양보호소'},{day: 6, name: '치와와', age: 3, gender:'여', carehouse: '서양보호소'}, {day: 6, name: '치와와', age: 3, gender:'여', carehouse: '서양보호소'}, {day: 6, name: '치와와', age: 3, gender:'여', carehouse: '서양보호소'}, {day: 6, name: '치와와', age: 3, gender:'여', carehouse: '서양보호소'}, {day: 6, name: '치와와', age: 3, gender:'여', carehouse: '서양보호소'}]
+export default function List(res){
+    const [items, setItems] = useState(res.data)
+    console.log(items)
 
     return (
         <section className="more-recommend">
@@ -16,7 +17,7 @@ export default function List(){
                     {items.map((item, key)=>{
                         return (
                             <li className="grid-items" key={key}>
-                                <Grid data={item} stat={false} />
+                                <Grid item={item} stat={false} />
                             </li>
                         )
                     })}

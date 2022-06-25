@@ -3,6 +3,7 @@ import useWindowWidth from '../../utils/useWindowWidth'
 import { Card } from './card';
 import '../../assets/css/recommend.css'
 import refreshIcon from '../../assets/icons/refresh.png'
+import { animalAll } from '../../services/api/animal';
 
 function useInterval(callback, delay) {
   const savedCallback = useRef()
@@ -23,8 +24,8 @@ function useInterval(callback, delay) {
 
 export default function RowSlider(res){
   const windowWidth = useWindowWidth()
-  //   const items = res.data
-  const items = [{day: 6, name: '치와와', age: 3, gender:'여', carehouse: '서양보호소'}, {day: 6, name: '치와와', age: 3, gender:'여', carehouse: '서양보호소'}, {day: 6, name: '치와와', age: 3, gender:'여', carehouse: '서양보호소'}, {day: 6, name: '치와와', age: 3, gender:'여', carehouse: '서양보호소'}, {day: 6, name: '치와와', age: 3, gender:'여', carehouse: '서양보호소'}]
+    const items = res.data
+//   const items = [{day: 6, name: '치와와', age: 3, gender:'여', carehouse: '서양보호소'}, {day: 6, name: '치와와', age: 3, gender:'여', carehouse: '서양보호소'}, {day: 6, name: '치와와', age: 3, gender:'여', carehouse: '서양보호소'}, {day: 6, name: '치와와', age: 3, gender:'여', carehouse: '서양보호소'}, {day: 6, name: '치와와', age: 3, gender:'여', carehouse: '서양보호소'}]
   const itemSize = items.length
   const sliderPadding = 40
   const sliderPaddingStyle = `0 ${sliderPadding}px`

@@ -1,0 +1,65 @@
+/* header */
+.header.quiz-header {
+    padding: 20px 20px;
+    border-bottom-right-radius: 60px;
+    background-color: #ffd8d3;
+    min-height: 0;
+    border-bottom-right-radius: 30px;
+}
+
+.header .header-nap .logo {
+    width: 40px;
+}
+.header-nap .logo img {
+    width: fit-content;
+}
+
+.choice {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 800px;
+    text-align: center;
+}
+
+.choice .title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 90px;
+}
+
+.choice-button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.choice-button button {
+    width: fit-content;
+    font-size: 20px;
+    font-weight: 700;
+    transition: all 0.4s;
+}
+
+.choice-button button:hover {
+    margin-top: 20px;
+    opacity: 1;
+    transform: scale(1.2);
+    margin: 0 20px;
+}
+
+.choice-button-cover {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin-bottom: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.choice-button-cover img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

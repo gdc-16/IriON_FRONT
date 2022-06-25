@@ -1,0 +1,101 @@
+.quiz-list {
+    max-width: 1100px;
+    padding: 70px 0;
+    margin: 0px auto;
+}
+
+.quiz-list .title {
+    padding: 40px 60px 40px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.progress-bar {
+    background-color: #fff;
+    border-radius: 17px;
+    height: 15px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.progress-bar::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 70%;
+    border-radius: 20px;
+    background-color: #51b6ff;
+}
+.progress-bar2 {
+    background-color: #fff;
+    border-radius: 17px;
+    height: 15px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.progress-bar2::before {
+    content: '     ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 60%;
+    border-radius: 20px;
+    background-color: #51b6ff;
+}
+.progress-bar3 {
+    background-color: #fff;
+    border-radius: 17px;
+    height: 15px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.progress-bar3::before {
+    content: '     ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 40%;
+    border-radius: 20px;
+    background-color: #51b6ff;
+}
+.progress-bar4 {
+    background-color: #fff;
+    border-radius: 17px;
+    height: 15px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.progress-bar4::before {
+    content: '     ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 20%;
+    border-radius: 20px;
+    background-color: #51b6ff;
+}
+.list-box {
+    background-color: #fff;
+    padding: 60px;
+    border-radius: 20px;
+}
+
+.list-box p + p {
+    margin-top: 50px;
+}
+
+.list-box p {
+    opacity: 0.7;
+}
+
+.list-box p:hover {
+    opacity: 1;
+}
