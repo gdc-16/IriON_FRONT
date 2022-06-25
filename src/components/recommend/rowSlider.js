@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import useWindowWidth from '../../utils/useWindowWidth'
 import { Card } from './card';
 import '../../assets/css/recommend.css'
+import refreshIcon from '../../assets/icons/refresh.png'
 
 function useInterval(callback, delay) {
   const savedCallback = useRef()
@@ -132,9 +133,11 @@ export default function RowSlider(res){
 
   return (<section className="recommend">
     <h2 className="recommend-title">우리아이와 잘 맞으시네요!</h2>
-    <ul className="flex"
-      onMouseOver={() => setIsSwiping(true)}
-      onMouseOut={() => setIsSwiping(false)}>
+    <div className="sort-button">
+        <button className="button">입양자님의 성향과 맞는 아이들이예요</button>
+        <button className="button">다른 아이 추천<img src={refreshIcon} alt="" /></button>
+    </div>
+    <ul className="flex">
       {items.map((item, key) => {
         return (<li className="flex-items" key={key}>
           <Card data={item} />

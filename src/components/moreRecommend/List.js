@@ -16,7 +16,7 @@ export default function List(){
                     {items.map((item, key)=>{
                         return (
                             <li className="grid-items" key={key}>
-                                <Grid data={item} />
+                                <Grid data={item} stat={false} />
                             </li>
                         )
                     })}

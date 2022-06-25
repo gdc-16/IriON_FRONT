@@ -1,4 +1,4 @@
-import { post, get } from './instance'
+import { post, get } from '../instance'
 
 //로그인 및 회원가입 API
 export const logIn = (info) =>

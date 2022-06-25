@@ -1,5 +1,5 @@
 import axios from 'axios'
-import storage from '../store'
+import storage from './store'
 
 const instance = axios.create({
   baseURL: 'http:///localhost:6000/api',
