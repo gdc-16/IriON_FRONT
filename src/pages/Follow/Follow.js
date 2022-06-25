@@ -1,9 +1,23 @@
 import React, { useRef, useEffect, useState } from 'react';
 import Grid from '../../components/moreRecommend/grid';
 import '../../assets/css/moreRecommend.css'
+import { animalAll } from '../../services/api/animal';
+
 
 export function Follow(){
-    const items = [{day: 6, name: '치와와', age: 3, gender:'여', carehouse: '서양보호소'}, {day: 6, name: '치와와', age: 3, gender:'여', carehouse: '서양보호소'}, {day: 6, name: '치와와', age: 3, gender:'여', carehouse: '서양보호소'}, {day: 6, name: '치와와', age: 3, gender:'여', carehouse: '서양보호소'}, {day: 6, name: '치와와', age: 3, gender:'여', carehouse: '서양보호소'},{day: 6, name: '치와와', age: 3, gender:'여', carehouse: '서양보호소'}, {day: 6, name: '치와와', age: 3, gender:'여', carehouse: '서양보호소'}, {day: 6, name: '치와와', age: 3, gender:'여', carehouse: '서양보호소'}, {day: 6, name: '치와와', age: 3, gender:'여', carehouse: '서양보호소'}, {day: 6, name: '치와와', age: 3, gender:'여', carehouse: '서양보호소'}]
+    let items = new Array(10)
+
+    const get = () => animalAll(0, 15).then((data)=>{
+        const value = data.content.data
+        
+        for(let i=5;i<15;i++){
+          items[i-5] = (value[i])
+        }
+        console.log(items[0])
+
+      })
+
+    Promise.all([get()])
 
     return (
         <section className="more-recommend">

@@ -1,7 +1,13 @@
 .advertise_area {
     padding: 20px 20px;
+    width: 100%;
     min-height: 300px;
     border-bottom-right-radius: 60px;
     background-color: #ffd8d3;
     margin-bottom: 80px;
+}
+
+.advertise_area .image {
+    width: auto;
+    height: 510px;
 }

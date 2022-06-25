@@ -1,5 +1,10 @@
 import React from 'react'
+import storage from '../../services/store'
 
 export function MyPage() {
-    return <div>마이 페이지입니다</div>
+    function logout() {
+        storage.remove("user")
+        window.location.replace("/")
+    }
+    return <div><button onClick={() => logout()}>로그아웃</button></div>
 }
