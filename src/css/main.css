@@ -44,12 +44,22 @@
 .recommend .flex {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     gap: 20px;
 }
 
 .recommend .flex-items {
-    width: 220px;
+    flex-basis: 220px;
+    flex-shrink: 0;
     flex-grow: 1;
+    opacity: 0.9;
+    transition: all .4s;
+}
+
+.recommend .flex-items:hover {
+    opacity: 1;
+    transform: scale(1.2);
+    margin: 0 20px;
 }
 
 .recommend .flex-items-cover {
@@ -93,9 +103,8 @@
 
 /* .more-recommend */
 .more-recommend {
-    margin: 60px 30px;
+    margin: 60px 30px 0;
     padding: 0 20px 50px;
-    border-bottom: 2px solid #EDEDED;
 }
 .more-recommend-title {
     margin: 40px 0;
@@ -163,4 +172,11 @@
 
 .grid-items-info p + p {
     margin-top: 5px;
+}
+
+/* footer */
+.footer {
+    padding: 50px;
+    border-top: 2px solid #EDEDED;
+    background-color: #fafafa;
 }
