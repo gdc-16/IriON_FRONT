@@ -1,7 +1,6 @@
 .header {
     padding: 20px 20px;
-    min-height: 300px;
-    border-bottom-right-radius: 60px;
+    min-height: 30px;
     background-color: #ffd8d3;
 }
 
@@ -17,10 +16,33 @@
     gap: 10px;
 }
 
+.header-nav-items .item img {
+    width: 24px;
+    height: 24px;
+}
+
 .input-wrap {
+    flex-grow: 1;
+    max-width: 800px;
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 10px;
+}
+
+.input-wrap .content {
+    outline: none;
+    border: none;
+    width: 100%;
+    background-color: #ffd8d3;
+    border-bottom: 1px solid black;
+}
+
+.search-icon {
+    display: flex;
+    width: 14px;
+    height: 14px;
+    justify-content: center;
+    align-items: center;
 }
 
 .profile {
