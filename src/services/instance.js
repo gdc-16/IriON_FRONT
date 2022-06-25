@@ -1,8 +1,8 @@
 import axios from 'axios'
-import storage from '../store'
+import storage from './store'
 
 const instance = axios.create({
-  baseURL: 'http:///localhost:6000/api',
+  baseURL: 'https://fastapi.irion.today/api/v1/',
 })
 
 const interceptorsRequestFulfilled = (config) => {
@@ -12,7 +12,7 @@ const interceptorsRequestFulfilled = (config) => {
       'Access-Control-Allow-Origin': '*',
       'Content-Type': 'application/json; charset=UTF-8',
       // prettier-ignore
-      'Authorization': `Bearer ${storage.get('user-token') ? storage.get('user-token') : null}`,
+      // 'Authorization': `Bearer ${storage.get('user-token') ? storage.get('user-token') : null}`,
     },
   }
 }
