@@ -1,0 +1,118 @@
+/* login */
+.login-wrap {
+    width: 50%;
+    border-top-right-radius: 60px;
+    background-color: #FFD8D3;
+    padding: 100px 8vw 105px ;
+    box-sizing: border-box;
+}
+
+.login-title {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.login-inner {
+    margin-top: 60px;
+    padding: 20px;
+}
+
+.login-inner h2 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.login-inner p {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+
+.login-inner input {
+    border: none;
+    height: 28px;
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 20px 25px;
+    box-sizing: border-box;
+    border-radius: 7px;
+}
+
+.button-flex {
+    display: flex;
+    margin: 20px 0 40px;
+    justify-content: space-between;
+}
+
+.button-flex button {
+    width: fit-content;
+    font-size: 12px;
+    color: #666666;
+}
+
+.login-button {
+    background-color: #B4B4B4;
+    color: #fff;
+    font-size: 14px;
+    height: 38px;
+    border-radius: 10px;
+}
+
+.login-inner .or {
+    text-align: center;
+    margin: 30px 0;
+    color: #fff;
+    font-size: 12px;
+    position: relative;
+}
+
+.login-inner .or::before {
+    content: " ";
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    right: 60%;
+    bottom: 0;
+    height: 1px;
+    margin: auto 0;
+}  
+
+.login-inner .or::after {
+    content: " ";
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+    left: 60%;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    margin: auto 0;
+}  
+
+.link-button-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.link-button {
+    width: 50px;
+    height: 50px;
+    background-image: url(../icon/Group\ 10083.png);
+    background-size: 50px 50px;
+}
+
+.link-button.google {
+    background-image: url(../icon/Group\ 10084.png);
+}
+
+.link-button.facebook {
+    background-image: url(../icon/Group\ 10085.png);
+}
+
+.login-button.sign-up {
+    background-color: #fff;
+    color: inherit;
+}
