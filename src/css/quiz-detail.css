@@ -1,0 +1,41 @@
+body {
+    background-color: #ffd8d3;
+}
+
+/* header */
+
+.header.quiz-header {
+    padding: 20px 20px;
+    border-bottom-right-radius: 60px;
+    background-color: #ffd8d3;
+    min-height: 0;
+    border-bottom-right-radius: 30px;
+}
+
+.achievement .flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 220px;
+}
+
+.achievement .flex .flex-items {
+    text-align: center;
+}
+
+.achievement .flex .flex-items img {
+    max-width: 180px;
+}
+
+.flex-items .progress50 {
+    color: #676767;
+}
+
+.flex-items .progress10 {
+    color: #939393;
+}
+
+.flex-items .progress0 {
+    color: #fff;
+}
