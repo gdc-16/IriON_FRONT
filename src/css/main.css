@@ -1,0 +1,33 @@
+.wrap {
+}
+
+.header {
+    padding: 20px 20px;
+    min-height: 300px;
+    border-bottom-right-radius: 60px;
+    background-color: #ffd8d3;
+}
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.header-nav-items {
+    display: flex;
+    gap: 10px;
+}
+
+.input-wrap {
+    flex-grow: 1;
+    max-width: 800px;
+}
+
+.input {
+    outline: none;
+    border: none;
+    width: 100%;
+    background-color: #ffd8d3;
+    border-bottom: 1px solid black;
+}
