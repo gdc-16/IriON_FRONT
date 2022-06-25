@@ -7,6 +7,7 @@ on:
 jobs:
   continuous-deployment:
     runs-on: ubuntu-latest
+    environment: AWS Deployment
     steps:
       - name: Git Checkout
         uses: actions/checkout@v2
