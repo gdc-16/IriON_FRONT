@@ -31,3 +31,11 @@ body {
 .flex-items .progress50 {
     color: #676767;
 }
+
+.flex-items .progress10 {
+    color: #939393;
+}
+
+.flex-items .progress0 {
+    color: #fff;
+}
