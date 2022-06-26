@@ -1,6 +1,8 @@
 import React from "react";
 import '../../assets/css/quiz.css'
 import { Link } from "react-router-dom";
+import Cat from '../../assets/cat.png'
+import Dog from '../../assets/dog.png'
 
 export function Init() {
     return (<section className="choice">
@@ -9,14 +11,14 @@ export function Init() {
         <Link to="/quiz/cat">
         <button type="button">
             <div className="choice-button-cover cat">
-                <img src="../img/daria-nepriakhina-7LAwrQ6tM7Y-unsplash.jpg" alt="" />
+                <img src={Cat} alt="" />
             </div>
             <p>냥이</p>
         </button></Link>
         <Link to="/quiz/dog">
         <button type="button">
             <div className="choice-button-cover">
-                <img src="../img/matt-zhang-Pn5MqNEgg74-unsplash.jpg" alt="" />
+                <img src={Dog} alt="" />
             </div>
             <p>댕이</p>
         </button></Link>

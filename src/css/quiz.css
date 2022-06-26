@@ -10,8 +10,8 @@
 .header .header-nap .logo {
     width: 40px;
 }
-.header-nap .logo img{
-    width: fit-content
+.header-nap .logo img {
+    width: fit-content;
 }
 
 .choice {
@@ -36,7 +36,7 @@
     width: fit-content;
     font-size: 20px;
     font-weight: 700;
-    transition: all .4s;
+    transition: all 0.4s;
 }
 
 .choice-button button:hover {
@@ -46,17 +46,24 @@
     margin: 0 20px;
 }
 
-.choice-button-cover {
-    width: 200px;
-    height: 200px;
+.choice-button-cover:first-child {
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     background-color: #ddd;
     margin-bottom: 50px;
     overflow: hidden;
     position: relative;
 }
+.choice-button-cover:last-child {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
 
-
+    margin-bottom: 50px;
+    overflow: hidden;
+    position: relative;
+}
 
 .choice-button-cover img {
     position: absolute;

@@ -7,18 +7,17 @@ export  function Main() {
   let items = []
   let items2 = []
 
-    animalAll(0, 15).then((data)=>{
-      const value = data.content.data
-      
-      for(let i=0;i<5;i++){
-        items.push(value[i])
-      }
-
-      for(let i=5;i<15;i++){
-        items2.push(value[i])
+    animalAll(0, 15).then(async (data)=>{
+      const [...value] = data.content.data
+       for(let i=0;i<15;i++){
+         items2.push(value[i])
+         items.push(value[i])
       }
     })
 
+    useEffect(() => {
+
+    }, [])
 
   return <div><Advertisement /><RowSlider data={items}/><List data={items2} /></div>
 }
