@@ -3,9 +3,9 @@ import Grid from './grid';
 import '../../assets/css/moreRecommend.css'
 
 export default function List(res){
-    const [items, setItems] = useState(res.data)
+    const [items, setItems] = useState(res.data || res.items)
     const [count, setCount] = useState(0)
-    console.log(items)
+    // console.log(items)
 
     useEffect(() => {
         const timer = setInterval(() => {

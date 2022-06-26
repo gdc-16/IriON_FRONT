@@ -15,9 +15,5 @@ export  function Main() {
       }
     })
 
-    useEffect(() => {
-
-    }, [])
-
   return <div><Advertisement /><RowSlider data={items}/><List data={items2} /></div>
 }

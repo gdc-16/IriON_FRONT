@@ -8,9 +8,20 @@ import alertIcon from '../../../assets/icons/alert.png'
 import quizIcon from '../../../assets/icons/quiz.png'
 import circleIcon from '../../../assets/icons/circle.png'
 import Logo from '../Logo/Logo';
+import { animalAll } from '../../../services/api/animal';
+
 
 export default function Header(){
   const [isUser, setIsUser] = useState(storage.get("user"))
+
+  let items = []
+
+    animalAll(0, 15).then(async (data)=>{
+      const [...value] = data.content.data
+       for(let i=0;i<15;i++){
+         items.push(value[i])
+      }
+    })
 
   return (
     <>
