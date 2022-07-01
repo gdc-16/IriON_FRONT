@@ -1,6 +1,6 @@
 .advertise_area {
     padding: 20px 20px;
-    width: 100%;
+    width: auto;
     min-height: 300px;
     border-bottom-right-radius: 60px;
     background-color: #ffd8d3;
