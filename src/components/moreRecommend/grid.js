@@ -5,23 +5,23 @@ import empty_heart from '../../assets/icons/empty_heart.png'
 import full_heart from '../../assets/icons/full_heart.png'
 
 export default function Grid(res) {
-    const val = res.item || this.props.items
-    const stat = res.stat
+    const [item, setItem] = useState(res.data);
+    const [stat, setStat] = useState(res.stat);
     const [status, setStatus] = useState(stat);
 
     return (
         <>
         <div className="grid-items-cover">
-            <img src={val?.Animal?.animal_image_url !== undefined?val.Animal.animal_image_url:photo} alt="추가 유기견" />
+            <img src={item?.Animal?.animal_image_url !== undefined?item.Animal.animal_image_url:photo} alt="추가 유기견" />
         </div>
         <div className="grid-items-info">
             <span onClick={() => setStatus(!status)}>
                 {status?<img src={full_heart} alt="팔로우하지 않음" className="heart_size"/>:
                 <img src={empty_heart} alt="팔로우하지 않음" className="heart_size"/>}
             </span>
-            <h3 className="title">앞으로 {val?.Animal?.left_day}일 남았어요</h3>
-            <p>{val?.Animal?.name} ({val?.Animal?.gender})/{val.Animal.age}살</p>
-            <p>{val?.Shelter?.shelter_name}</p>
+            <h3 className="title">앞으로 {item?.Animal?.left_day}일 남았어요</h3>
+            <p>{item?.Animal?.name} ({item?.Animal?.gender})/{item.Animal.age}살</p>
+            <p>{item?.Shelter?.shelter_name}</p>
         </div>
         </>
     )

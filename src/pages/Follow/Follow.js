@@ -1,9 +1,27 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import {useSelector} from 'react-redux'
 import Grid from '../../components/moreRecommend/grid';
 import '../../assets/css/moreRecommend.css'
-// import { animalAll } from '../../services/api/animal';
 
-export function Follow(props){
+export function Follow(){
+    const animalStore = useSelector((state) => state.animal);
+    const [items, setItems] = useState([])
+
+    function getData() {
+        const data = animalStore.animalAll.data?.content?.data
+        if(data) setItems(data)
+    }
+    
+    useEffect(() => {
+        function timer() {
+            setTimeout(getData, 100)
+        }
+        if(animalStore.animalAll.data) {
+            timer();
+            return () => clearTimeout(timer);
+        }
+    }, [animalStore.animalAll])
+
         return (
             <section className="more-recommend">
                 <h2 className="more-recommend-title">더 보고 싶은 아이들 목록</h2>
@@ -12,14 +30,13 @@ export function Follow(props){
                     <button className="button"></button>
                 </div>
                 <ul className="grid">
-                    {/* {this.props.items.map((item, key)=>{
-                        console.log(item)
+                    {items.map((item, key)=>{
                         return (
                             <li className="grid-items" key={key}>
                                 <Grid data={item} stat={true} />
                             </li>
                         )
-                    } )} */}
+                    } )}
                 </ul>
             </section>
         )

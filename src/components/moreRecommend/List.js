@@ -1,19 +1,26 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Grid from './grid';
 import '../../assets/css/moreRecommend.css'
+import {useSelector} from 'react-redux'
 
-export default function List(res){
-    const [items, setItems] = useState(res.data || res.items)
-    const [count, setCount] = useState(0)
-    // console.log(items)
+export default function List(){
+    const animalStore = useSelector((state) => state.animal);
+    const [items, setItems] = useState([])
+
+    function getData() {
+        const data = animalStore.animalAll.data?.content?.data
+        if(data) setItems(data)
+    }
 
     useEffect(() => {
-        const timer = setInterval(() => {
-            setCount(count + 1);
-        }, 1000);
-    
-        return () => clearInterval(timer);
-    }, [])
+        function timer() {
+            setTimeout(getData, 100)
+        }
+        if(animalStore.animalAll.data) {
+            timer();
+            return () => clearTimeout(timer);
+        }
+    }, [animalStore.animalAll])
 
     return (
         <section className="more-recommend">
@@ -26,7 +33,7 @@ export default function List(res){
                     {items.map((item, key)=>{
                         return (
                             <li className="grid-items" key={key}>
-                                <Grid item={item} stat={false} />
+                                <Grid data={item} stat={false} />
                             </li>
                         )
                     })}

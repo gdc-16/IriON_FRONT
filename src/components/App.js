@@ -1,23 +1,19 @@
 import { Route, Routes } from 'react-router-dom'
 import { Main, Follow, Alert, Login, Signup, Init, MyPage, Dog, Cat, CatQuiz1, CatQuiz2, CatQuiz3,CatQuiz4,CatQuiz5, CatFinal } from '../pages/index';
 import Header from './common/Header/Header';
-import { animalAll } from '../services/api/animal';
+import  {animalAll}  from '../store/actions/animalAction';
+import {useDispatch, useSelector} from 'react-redux';
+import React, {useEffect} from 'react';
 
 function App() {
-  let items = []
-  let items2 = []
-  animalAll(0, 15).then(async (data)=>{
-    const [...value] = data.content.data
-     for(let i=0;i<15;i++){
-       items2.push(value[i])
-       items.push(value[i])
-    }
-  })
+  const dispatch = useDispatch();
+  
+  useEffect(() => {dispatch(animalAll())}, [])
   return (<>
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />  
-        <Route path="/follow" element={<Follow items={items}/>} />
+        <Route path="/follow" element={<Follow />} />
         <Route path="/alert" element={<Alert />} />
         <Route path="/mypage" element={<MyPage />} />
         <Route path="/login" element={<Login />} />
